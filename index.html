@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Store</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                        english: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        soft: {
+                            pink: '#FDF2F4',
+                            rose: '#FB7185',
+                            cream: '#FAFAF9',
+                            amber: '#FFFBEB',
+                            amberAccent: '#D97706',
+                            emerald: '#ECFDF5',
+                            emeraldAccent: '#059669',
+                            text: '#475569'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FCFCFD;
+            color: #475569;
+        }
+        .soft-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(241, 245, 249, 0.9);
+            box-shadow: 0 10px 30px -10px rgba(244, 114, 182, 0.05);
+        }
+        .soft-gradient-bg {
+            background: linear-gradient(180deg, #FDF4F5 0%, #FAFAF9 50%, #FCFCFD 100%);
+        }
+        .badge-soft {
+            background: #FFF1F2;
+            color: #E11D48;
+        }
+        .ui-screenshot-frame {
+            border: 6px solid #FFFFFF;
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(241, 245, 249, 0.8);
+            border-radius: 2rem;
+            background: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-rose-100 selection:text-rose-600">
+
+    <!-- Header Navigation -->
+    <header class="py-5 px-6 max-w-5xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-rose-100 text-rose-500 font-bold flex items-center justify-center text-sm shadow-xs">
+                🌸
+            </div>
+            <span class="font-bold text-slate-800 text-base tracking-tight">Matjari </span>
+        </div>
+        <a href="#bundle" class="bg-rose-500 hover:bg-rose-600 text-white px-5 py-2 rounded-full font-medium text-xs shadow-sm transition-all">
+            امتلكي الأدوات ✨
+        </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="soft-gradient-bg pt-10 pb-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-rose-50 text-rose-500 font-medium text-xs mb-5 border border-rose-100">
+                ✨ مساحتكِ للتوازن، الوفرة والسكينة
+            </span>
+            
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-800 leading-relaxed mb-5">
+                أدوات رقمية تفاعلية بلمسة أنثوية ناعمة <br>
+                <span class="text-rose-500 font-bold">ترافقكِ في التخطيط والوعي والجمال</span>
+            </h1>
+            
+            <p class="text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8 font-normal">
+                3 ادوات صُممت بعناية لتساعدكِ على ترتيب يومكِ، متابعة روتينكِ والعناية بجمالكِ، السيطرة على أموالكِ بوضوح، وتثبيت وردكِ القرآني بأسلوب سلس ولطيف.
+            </p>
+
+            <div class="flex justify-center gap-3">
+                <a href="#products" class="bg-slate-800 text-white px-7 py-3 rounded-full font-medium text-xs hover:bg-slate-700 transition-all shadow-sm">
+                    استكشفي الادوات الرقمية المساعدة 🌿
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Showcase -->
+    <div id="products" class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Product 1: Glow Up 365 -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-rose-100/80 soft-card">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Detailed Recreated UI Screenshot (Glow Up 365) -->
+                <div class="md:col-span-5">
+                    <div class="ui-screenshot-frame bg-gradient-to-b from-pink-50/70 via-white to-pink-50/40 p-3.5 max-w-[270px] mx-auto">
+                        <!-- Top Slogan Card -->
+                        <div class="bg-pink-100/50 py-2 px-3 rounded-2xl text-center mb-2.5">
+                            <p class="font-english italic text-pink-500 font-bold text-[11px] leading-tight">,Glowing skin<br>Glowing mind<br>.Glowing life</p>
+                        </div>
+                        
+                        <!-- Header Box -->
+                        <div class="bg-white p-2.5 rounded-2xl mb-2.5 shadow-xs border border-pink-100 flex items-center justify-between">
+                            <div>
+                                <span class="bg-pink-100/80 text-pink-600 text-[9px] font-bold px-2 py-0.5 rounded-full">المساحة الخاصة بالأنثى</span>
+                                <h4 class="font-extrabold text-slate-800 text-xs mt-1">Glow up 365 ✨</h4>
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-pink-100/60 text-pink-500 flex items-center justify-center font-bold text-[10px] text-center leading-tight">
+                                Glow<br>Up
+                            </div>
+                        </div>
+
+                        <!-- Gauge Box -->
+                        <div class="bg-white/90 p-3 rounded-2xl border border-pink-100 mb-2.5 shadow-xs">
+                            <div class="flex justify-between items-center text-[11px] font-bold mb-0.5">
+                                <span class="text-slate-800">🪄 مؤشر الـ Glow Up اليومي</span>
+                            </div>
+                            <p class="text-[9px] text-slate-400 mb-1.5 leading-tight">يتغير الشريط بناءً على اهتمامك بصلواتك وعنايتك...</p>
+                            <div class="flex justify-between text-[10px] font-bold mb-1">
+                                <span class="text-slate-500">النسبة المنجزة:</span>
+                                <span class="text-pink-500">0%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1.5">
+                                <div class="bg-gradient-to-r from-pink-400 to-rose-400 h-full w-0"></div>
+                            </div>
+                            <div class="bg-pink-50/60 p-1.5 rounded-xl text-center border border-pink-100/50">
+                                <p class="text-[9px] text-slate-600">🌸 جسدك يستحق لحظة حب ورعاية</p>
+                            </div>
+                        </div>
+
+                        <!-- Mini Faith Module -->
+                        <div class="bg-white p-2.5 rounded-2xl border border-slate-100 shadow-xs text-[10px]">
+                            <div class="flex justify-between font-bold text-slate-700 mb-1">
+                                <span>🕌 ركن الروح والسكينة</span>
+                                <span class="text-[9px] text-indigo-500 font-normal">0/5 صلوات</span>
+                            </div>
+                            <div class="grid grid-cols-5 gap-1 text-[8px] text-center font-bold text-slate-500">
+                                <div class="p-1 rounded bg-slate-50 border">الفجر</div>
+                                <div class="p-1 rounded bg-slate-50 border">الظهر</div>
+                                <div class="p-1 rounded bg-slate-50 border">العصر</div>
+                                <div class="p-1 rounded bg-slate-50 border">المغرب</div>
+                                <div class="p-1 rounded bg-slate-50 border">العشاء</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Details -->
+                <div class="md:col-span-7 space-y-3 text-right">
+                    <span class="inline-block px-3 py-1 rounded-full badge-soft font-medium text-xs">
+                        🌸 للتألق والتطوير الشامل
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-800">Glow Up 365</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                        رفيقتكِ اليومية لتنظيم روتين العناية بالبشرة والصحة، تتبع الصلوات والأذكار، شرب الماء، والتدوين المالي اليومي في واجهة أنيقة ومبهجة.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 pt-1 font-normal">
+                        <li>✨ مؤشر حقيقي لحساب نسبة توهجكِ وإنجازكِ اليومي</li>
+                        <li>🌿 ركن السكينة (تتبع الصلوات الخمس والأذكار)</li>
+                        <li>💧 تتبع شرب الماء ومتابعة روتين العناية الـ 14 خطوة</li>
+                        <li>📝 مساحتكِ الخاصة للتدوين، التفريغ النفسي، والركن المالي</li>
+                    </ul>
+                    <div class="pt-3">
+                        <a href="https://wa.me/?text=اريد_شراء_تطبيق_Glow_Up" target="_blank" class="inline-block bg-rose-400 hover:bg-rose-500 text-white text-xs px-6 py-2.5 rounded-full font-medium transition-all shadow-sm">
+                            امتلكي تطبيق Glow Up 💖
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2: The Compass -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-100/80 soft-card">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Detailed Recreated UI Screenshot (The Compass) -->
+                <div class="md:col-span-5">
+                    <div class="ui-screenshot-frame bg-amber-50/30 p-3.5 max-w-[270px] mx-auto">
+                        <!-- Top Header Bar -->
+                        <div class="flex items-center justify-between pb-2 border-b border-amber-200/50 mb-2.5">
+                            <div class="w-7 h-7 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-black text-[10px]">H</div>
+                            <div class="text-center">
+                                <h4 class="font-extrabold text-slate-900 text-xs">The Compass</h4>
+                                <p class="text-[8px] text-amber-700 font-bold">الوعي المالي والوضوح الرقمي</p>
+                            </div>
+                            <div class="w-6 h-6 rounded bg-slate-900 text-amber-400 flex items-center justify-center text-[10px]">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-2">
+                            <span class="text-[11px] font-extrabold text-slate-800 border-r-2 border-amber-500 pr-1.5">قائمة المركز المالي</span>
+                        </div>
+
+                        <!-- Card 1: Assets -->
+                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 mb-2 shadow-xs">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-bold text-slate-800 text-[10px]">الأصول (Assets)</span>
+                                <span class="font-black text-slate-900 text-xs">$0</span>
+                            </div>
+                            <div class="flex gap-1 text-[9px]">
+                                <div class="bg-slate-50 border rounded-lg p-1 w-1/2 text-[8px] text-slate-400">مثال: كاش، ذمم</div>
+                                <div class="bg-slate-50 border rounded-lg p-1 w-1/4 text-[8px] text-slate-400">القيمة</div>
+                                <div class="bg-slate-900 text-white rounded-lg px-2 font-bold flex items-center justify-center">+</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Liabilities -->
+                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 mb-2 shadow-xs">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-bold text-slate-800 text-[10px]">الالتزامات (Liabilities)</span>
+                                <span class="font-black text-slate-900 text-xs">$0</span>
+                            </div>
+                            <div class="flex gap-1 text-[9px]">
+                                <div class="bg-slate-50 border rounded-lg p-1 w-1/2 text-[8px] text-slate-400">مثال: قرض، ذمم</div>
+                                <div class="bg-slate-50 border rounded-lg p-1 w-1/4 text-[8px] text-slate-400">القيمة</div>
+                                <div class="bg-slate-800 text-white rounded-lg px-2 font-bold flex items-center justify-center">+</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Equity -->
+                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-xs">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-bold text-slate-800 text-[10px]">حقوق الملكية (Equity)</span>
+                                <span class="font-black text-amber-600 text-xs">$0</span>
+                            </div>
+                            <div class="flex gap-1 text-[9px]">
+                                <div class="bg-slate-50 border rounded-lg p-1 w-1/2 text-[8px] text-slate-400">مثال: رأس المال</div>
+                                <div class="bg-slate-50 border rounded-lg p-1 w-1/4 text-[8px] text-slate-400">القيمة</div>
+                                <div class="bg-amber-500 text-white rounded-lg px-2 font-bold flex items-center justify-center">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Details -->
+                <div class="md:col-span-7 space-y-3 text-right">
+                    <span class="inline-block px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-medium text-xs">
+                        📊 للوضوح المالي والاعمال
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-800">The Compass</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                        تطبيق بسيط ومحاسبي بامتياز يمنحكِ رؤية واضحة لأموالكِ. نظمي أصولكِ والتزاماتكِ وتابعي أرباح أعمالكِ بكل يسر بدون تعقيدات.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 pt-1 font-normal">
+                        <li>🍃 لوحة تحكم بسيطة وحساب آلي للإجماليات</li>
+                        <li>⚖️ تبويب سلس لقائمة المركز المالي (الأصول، الالتزامات، حقوق الملكية)</li>
+                        <li>📈 تحليل ربحية المبيعات وتصدير التقارير لـ Excel</li>
+                    </ul>
+                    <div class="pt-3">
+                        <a href="https://wa.me/?text=اريد_شراء_تطبيق_The_Compass" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-white text-xs px-6 py-2.5 rounded-full font-medium transition-all shadow-sm">
+                            امتلكي بوصلة الوعي المالي 🧭
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3: Methaq -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100/80 soft-card">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Detailed Recreated UI Screenshot (Methaq) -->
+                <div class="md:col-span-5">
+                    <div class="ui-screenshot-frame bg-amber-50/40 p-3.5 max-w-[270px] mx-auto">
+                        <!-- Top Header Bar -->
+                        <div class="flex justify-between items-center pb-2 border-b border-amber-200/50 mb-2">
+                            <div class="bg-pink-100 text-pink-600 text-[8px] font-bold px-2 py-0.5 rounded-lg">البدء من جديد</div>
+                            <div class="text-right">
+                                <h4 class="font-extrabold text-amber-950 text-xs">مِيثاق الحِفْظِ 📖</h4>
+                                <p class="text-[7.5px] text-amber-700">تخطيط ذكي للتسميع والترحيل</p>
+                            </div>
+                        </div>
+
+                        <!-- Date Banner -->
+                        <div class="text-center mb-2">
+                            <span class="bg-amber-100 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded-full">28 يوليو، 2026</span>
+                            <h5 class="text-sm font-black text-amber-950 mt-0.5">اليوم الأول</h5>
+                            <p class="text-[8px] text-amber-800/80 leading-tight mt-0.5">مساحتك الحرة لتسميع وحفظ كتاب الله غيباً...</p>
+                        </div>
+
+                        <!-- Step Card -->
+                        <div class="bg-white p-2.5 rounded-xl border border-amber-200/60 shadow-xs text-[10px]">
+                            <p class="font-bold text-amber-800 text-[9px] mb-1.5">الخطوة الأولى: إعداد السورة والورد ✍️</p>
+                            
+                            <p class="text-[8px] text-slate-400 font-bold mb-0.5">1. اسم السورة</p>
+                            <div class="bg-slate-50 border rounded-lg p-1 font-bold text-slate-800 mb-1.5 text-[9px]">الملك</div>
+
+                            <div class="grid grid-cols-2 gap-1 mb-1.5">
+                                <div class="bg-slate-50 border rounded-lg p-1 text-center font-bold text-[9px]">من آية: 1</div>
+                                <div class="bg-slate-50 border rounded-lg p-1 text-center font-bold text-[9px]">إلى آية: 5</div>
+                            </div>
+
+                            <div class="bg-amber-50 p-1.5 rounded-lg text-center border border-amber-100">
+                                <span class="text-[8.5px] text-amber-800 font-bold block">حجم ورد اليوم: 5 آيات</span>
+                                <span class="text-[10px] font-black text-amber-950">إجمالي الآيات: 0 آية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Details -->
+                <div class="md:col-span-7 space-y-3 text-right">
+                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-medium text-xs">
+                        🕊️ للجانب القرآني والإيماني
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-800">مِيثاق الحِفْظِ</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                        تطبيق لطيف ومساعد مخصص لمتابعة وتثبيت حفظ القرآن الكريم. ينقل حفظ اليوم تلقائياً ليكون ورد مراجعة مثبت في الغد لضمان عدم النسيان.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 pt-1 font-normal">
+                        <li>🔄 ترحيل آلي تلقائي لتثبيت الحفظ والمراجعة</li>
+                        <li>🌱 تدقيق كتابي ومطابقة ذكية ملونة للأخطاء</li>
+                        <li>📊 حساب تلقائي لورد اليوم وإجمالي الآيات المحفوظة</li>
+                    </ul>
+                    <div class="pt-3">
+                        <a href="https://wa.me/?text=اريد_شراء_تطبيق_ميثاق_الحفظ" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-6 py-2.5 rounded-full font-medium transition-all shadow-sm">
+                            احصلي على ميثاق الحفظ 📖
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bundle Offer -->
+    <section id="bundle" class="py-12 px-4 max-w-3xl mx-auto text-center my-8">
+        <div class="bg-gradient-to-b from-rose-50/60 to-amber-50/40 p-8 rounded-3xl border border-rose-100">
+            <span class="text-rose-500 font-semibold text-xs uppercase tracking-wider bg-white px-3 py-1 rounded-full border border-rose-100">
+                🎁 العرض الماسي الكامل
+            </span>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mt-3 mb-2">امتلكي المنظومة الثلاثية الكاملة</h3>
+            <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto mb-6">
+                احصلي على التطبيقات الثلاثة معاً لتجربة متكاملة تجمع بين الجمال، المال، والروح بخصم خاص وتفعيل دائم  .
+            </p>
+
+            <a href="https://wa.me/?text=اريد_شراء_الباقة_الكاملة" target="_blank" class="inline-block bg-slate-800 hover:bg-slate-900 text-white px-8 py-3.5 rounded-full font-medium text-xs shadow-md transition-all">
+                احصلي الباقة الكاملة الآن ✨
+            </a>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="py-6 text-center text-slate-400 text-[11px] border-t border-slate-100">
+        <p>© 2026 جميع الحقوق محفوظة | Designed  by <span class="text-slate-600 font-medium">Hedaya Odat</span></p>
+    </footer>
+
+</body>
+</html>
+
