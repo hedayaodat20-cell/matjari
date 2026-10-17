@@ -1,365 +1,339 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Store</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Cairo & Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                        english: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    colors: {
-                        soft: {
-                            pink: '#FDF2F4',
-                            rose: '#FB7185',
-                            cream: '#FAFAF9',
-                            amber: '#FFFBEB',
-                            amberAccent: '#D97706',
-                            emerald: '#ECFDF5',
-                            emeraldAccent: '#059669',
-                            text: '#475569'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #FCFCFD;
-            color: #475569;
-        }
-        .soft-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid rgba(241, 245, 249, 0.9);
-            box-shadow: 0 10px 30px -10px rgba(244, 114, 182, 0.05);
-        }
-        .soft-gradient-bg {
-            background: linear-gradient(180deg, #FDF4F5 0%, #FAFAF9 50%, #FCFCFD 100%);
-        }
-        .badge-soft {
-            background: #FFF1F2;
-            color: #E11D48;
-        }
-        .ui-screenshot-frame {
-            border: 6px solid #FFFFFF;
-            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(241, 245, 249, 0.8);
-            border-radius: 2rem;
-            background: #FFFFFF;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجري | Matjari</title>
+<meta name="description" content="Glow Up 365 · The Compass · ميثاق الحفظ">
+<meta name="theme-color" content="#F6F1E7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E7; --card:#FBF8F1; --line:#E9DFCB; --ink:#2A2421; --soft:#7B6F64;
+  --rose:#D45A7E; --rose-d:#8E2F4E; --navy:#0F2B35; --gold:#C9A45C; --sage:#4E7A5A; --sage-d:#2E4B37;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Readex Pro',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.en{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:600;letter-spacing:-.01em}
+.amiri{font-family:'Amiri',serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:12px}
+
+/* header */
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px}
+.mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#F2DDA4;font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:17px;line-height:1}
+.brand small{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--soft);font-size:14px}
+.hlink{font-size:13px;font-weight:500;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+
+/* hero */
+.hero{text-align:center;padding:44px 0 8px}
+.hero h1{font-weight:600;font-size:clamp(28px,7.6vw,52px);line-height:1.45;letter-spacing:-.01em}
+.hero h1 .r{color:var(--rose)}
+.hero h1 .g{color:var(--sage)}
+.hero h1 .n{color:#1D5566}
+.fan{position:relative;width:min(100%,460px);margin:30px auto 0;aspect-ratio:1/1.02}
+.fan::before{content:"";position:absolute;inset:6% 0 10%;border-radius:50%;background:radial-gradient(closest-side,#F4D9DF 0%,#EFE4D1 60%,transparent 100%)}
+.fan::after{content:"";position:absolute;left:18%;right:18%;bottom:1%;height:6%;border-radius:50%;background:radial-gradient(closest-side,rgba(60,35,30,.22),transparent)}
+.fan .ph{position:absolute;width:40%;top:6%}
+.fan .p1{right:4%;transform:rotate(10deg);top:9%}
+.fan .p2{left:50%;margin-left:-20%;z-index:2;top:3%}
+.fan .p3{left:4%;transform:rotate(-10deg);top:9%}
+.fan .shade{display:none}
+/* phone */
+.ph{container-type:inline-size;aspect-ratio:1/2.06}
+.fr{width:100%;height:100%;border-radius:15.5cqw;padding:2.6cqw;background:linear-gradient(145deg,#4B4552,#1C1920 50%,#3A3541);
+  box-shadow:0 0 0 .5cqw #57515E inset,0 22px 40px -22px rgba(60,30,40,.38),0 8px 16px -10px rgba(0,0,0,.22)}
+.scr{position:relative;width:100%;height:100%;border-radius:12.4cqw;overflow:hidden;background:#fff;direction:rtl;text-align:right}
+.island{position:absolute;top:2.6cqw;left:50%;transform:translateX(-50%);width:30cqw;height:8.2cqw;border-radius:9cqw;background:#0B0A0D;z-index:5}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:3.6cqw 8cqw 0;height:13cqw;font-size:3.9cqw;font-weight:600;direction:ltr}
+.bat{width:7.5cqw;height:3.6cqw;border-radius:1.2cqw;border:.5cqw solid currentColor;position:relative;opacity:.85}
+.bat::after{content:"";position:absolute;inset:.5cqw;right:1.6cqw;background:currentColor;border-radius:.5cqw}
+.sc{padding:2cqw 6.5cqw 0}
+
+/* real app screenshots inside the phones */
+.shot{display:flex;flex-direction:column}
+.shot .sbar{flex:none}
+.shot img{display:block;width:100%;flex:1 1 auto;min-height:0;object-fit:cover;object-position:top center}
+
+/* product cards */
+.prods{display:grid;gap:34px;margin-top:22px}
+.cover{container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:30px;overflow:hidden;isolation:isolate}
+.cover .txt{position:absolute;top:8.5cqw;right:8cqw;left:8cqw;z-index:4}
+.cover .kick{display:inline-block;font-size:3.5cqw;font-weight:500;padding:1.4cqw 3.6cqw;border-radius:9cqw;margin-bottom:3cqw}
+.cover h2{font-size:11.5cqw;line-height:1.1;font-weight:600}
+.cover p{font-size:4.6cqw;margin-top:2.4cqw;font-weight:400}
+.cover .ph{position:absolute;width:52cqw;top:45cqw;left:24cqw;transform:rotate(-7deg);z-index:2}
+.chip{position:absolute;z-index:3;display:flex;align-items:center;gap:1.8cqw;font-size:3.9cqw;font-weight:600;padding:2.6cqw 4.2cqw;border-radius:9cqw;
+  background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 3cqw 7cqw -3cqw rgba(30,20,25,.35);white-space:nowrap}
+.blob{position:absolute;border-radius:50%;z-index:0}
+.cover .tag{position:absolute;top:8.5cqw;left:8cqw;z-index:4;font-size:4.2cqw;font-weight:600;padding:2.2cqw 4.6cqw;border-radius:9cqw;display:none}
+.cover .sig{position:absolute;bottom:6.5cqw;left:8cqw;z-index:4;display:none;align-items:center;gap:2cqw;font-size:3.6cqw;font-weight:500}
+.cover .sig .mark{width:7.4cqw;height:7.4cqw;font-size:3.8cqw}
+.cover.export .tag{display:flex}
+.cover.export .free{display:none}
+
+.c-glow{background:linear-gradient(160deg,#FBE6EA 0%,#F6CFD8 60%,#F1BFCC 100%);color:#5A2238}
+.c-glow .kick{background:rgba(255,255,255,.6);color:var(--rose-d)}
+.c-glow h2{color:#7E2A47}
+.c-glow .b1{width:80cqw;height:80cqw;background:radial-gradient(closest-side,#FFF3F5,transparent);left:-26cqw;top:30cqw}
+.c-glow .b2{width:60cqw;height:60cqw;border:.5cqw solid rgba(255,255,255,.55);right:-22cqw;top:56cqw}
+.c-glow .ch1{right:6cqw;top:66cqw;color:var(--rose-d)}
+.c-glow .ch2{left:5cqw;top:92cqw;color:#3D6F9E}
+.c-glow .tag{background:#7E2A47;color:#FFF1F3}
+
+.c-comp{background:radial-gradient(90% 70% at 85% 10%,#1E5161 0%,#123744 45%,#0B222B 100%);color:#F3ECDD}
+.c-comp .kick{background:rgba(201,164,92,.16);color:#E8CB88}
+.c-comp h2{color:#F6EEDB}
+.c-comp p{color:#C9D3D1}
+.c-comp .b1{width:90cqw;height:90cqw;background:radial-gradient(closest-side,rgba(201,164,92,.28),transparent);left:-30cqw;top:40cqw}
+.c-comp .b2{width:70cqw;height:70cqw;border:.4cqw solid rgba(201,164,92,.35);right:-30cqw;top:50cqw}
+.c-comp .ch1{right:5cqw;top:70cqw;color:#1F6B4F;background:rgba(255,253,246,.92)}
+.c-comp .ch2{left:5cqw;top:93cqw;color:#13303A;background:rgba(255,253,246,.92)}
+.c-comp .fr{box-shadow:0 0 0 .6cqw #3A3540 inset,0 34px 70px -20px rgba(0,0,0,.6)}
+.c-comp .tag{background:#E5C27A;color:#0F2B35}
+.c-comp .sig{color:#E9DDBF}
+.c-comp .sig .mark{background:#F2DDA4;color:#0F2B35}
+
+.c-meth{background:linear-gradient(165deg,#E5ECDD 0%,#D2DEC9 55%,#C3D3BA 100%);color:#24382B}
+.c-meth .kick{background:rgba(255,255,255,.6);color:var(--sage-d)}
+.c-meth h2{font-family:'Amiri',serif;font-size:13cqw;font-weight:700;color:var(--sage-d);line-height:1.25}
+.c-meth .b1{width:84cqw;height:84cqw;background:radial-gradient(closest-side,#F5F3E8,transparent);left:-28cqw;top:34cqw}
+.c-meth .b2{width:64cqw;height:64cqw;border:.5cqw solid rgba(255,255,255,.6);right:-24cqw;top:58cqw}
+.c-meth .ch1{right:5cqw;top:101cqw;color:var(--sage-d)}
+.c-meth .ch2{left:4cqw;top:73cqw;color:#8A6416}
+.c-meth .free{position:absolute;top:8.5cqw;left:8cqw;z-index:4;font-size:3.9cqw;font-weight:600;background:#2E4B37;color:#F4F1E6;padding:1.8cqw 4cqw;border-radius:9cqw}
+.c-meth .tag{background:#2E4B37;color:#F4F1E6}
+
+.buy{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 6px 0}
+.price{font-size:30px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.price small{font-size:15px;font-weight:500;color:var(--soft);margin-right:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:999px;font-weight:500;font-size:15px;color:#fff;white-space:nowrap;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 22px -12px rgba(0,0,0,.45)}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.b-rose{background:#C24D72}.b-navy{background:#0F2B35}.b-sage{background:#3F6849}.b-ink{background:var(--ink)}
+.freep{font-size:22px;font-weight:600;color:var(--sage-d)}
+
+/* bundle */
+.bundle{margin-top:64px;border-radius:30px;background:var(--card);border:1px solid var(--line);padding:34px 24px 30px;text-align:center;position:relative;overflow:hidden}
+.pair{position:relative;height:236px;width:290px;margin:0 auto 22px}
+.mini{position:absolute;width:158px;top:14px;border-radius:20px;box-shadow:0 22px 40px -18px rgba(40,25,20,.45)}
+.mini .cover{border-radius:20px}
+.mini .chip{display:none}
+.pair .q1{right:8px;transform:rotate(7deg)}
+.pair .q2{left:8px;transform:rotate(-7deg);top:24px;z-index:2}
+.bundle h3{font-size:24px;line-height:1.3;direction:ltr}
+.bundle h3 .plus{font-family:'Readex Pro';font-style:normal;color:var(--gold);margin:0 6px}
+.bprice{display:flex;align-items:baseline;justify-content:center;gap:12px;margin:12px 0 22px}
+.bprice .now{font-size:40px;font-weight:600}
+.bprice .now small{font-size:18px;color:var(--soft);font-weight:500}
+.bprice s{font-size:21px;color:#A79A8B;text-decoration:none;position:relative;padding:0 2px}
+.bprice s::after{content:"";position:absolute;left:-3px;right:-3px;top:52%;border-top:2px solid var(--rose);transform:rotate(-16deg);opacity:.85}
+.bundle .btn{width:100%;max-width:320px}
+
+/* steps */
+.how{padding:64px 0 56px;text-align:center}
+.how h3{font-size:20px;font-weight:600;margin-bottom:26px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;list-style:none;position:relative;max-width:560px;margin:0 auto}
+.steps::before{content:"";position:absolute;top:22px;right:16%;left:16%;border-top:1px dashed #D6C8AE}
+.steps li{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:13.5px;font-weight:500;line-height:1.5;position:relative}
+.steps .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);font-size:17px;font-weight:600}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--soft);font-size:12px}
+footer .mark{width:28px;height:28px;font-size:14px}
+
+@media (min-width:760px){
+  .prods{grid-template-columns:repeat(3,1fr);gap:26px}
+  .buy{flex-direction:column;align-items:stretch;text-align:center}
+  .hero{padding-top:64px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .fan .ph{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+  .fan .p1{animation-delay:.12s}.fan .p3{animation-delay:.2s}
+}
+@keyframes rise{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+.about{margin:16px 6px 4px;font-size:15.5px;line-height:1.95;color:#3a3330;font-weight:400;text-wrap:pretty}
+.about::before{content:"";display:block;width:34px;height:3px;border-radius:3px;margin-bottom:10px;background:currentColor;opacity:.0}
+.about.a-rose{border-right:3px solid #E7A3B4;padding-right:12px}
+.about.a-ink{border-right:3px solid #C9A45C;padding-right:12px}
+.about.a-sage{border-right:3px solid #9DB89A;padding-right:12px}
+.pwrap{display:flex;flex-direction:column;gap:2px}
+.once{font-size:12.5px;font-weight:600;color:#9A7A3A;white-space:nowrap}
+</style>
 </head>
-<body class="font-sans antialiased selection:bg-rose-100 selection:text-rose-600">
+<body>
 
-    <!-- Header Navigation -->
-    <header class="py-5 px-6 max-w-5xl mx-auto flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-full bg-rose-100 text-rose-500 font-bold flex items-center justify-center text-sm shadow-xs">
-                🌸
-            </div>
-            <span class="font-bold text-slate-800 text-base tracking-tight">Matjari </span>
-        </div>
-        <a href="#bundle" class="bg-rose-500 hover:bg-rose-600 text-white px-5 py-2 rounded-full font-medium text-xs shadow-sm transition-all">
-            امتلكي الأدوات ✨
-        </a>
-    </header>
+<!-- ===== الأسعار: عدّليها من هون فقط ===== -->
+<script>
+  const PRICES = {
+    glow:    { now: 5 },           // Glow Up 365
+    compass: { now: 25 },          // The Compass (شراء لمرة واحدة)
+    bundle:  { now: 27, old: 30 }   // الباقة: Glow Up + The Compass
+  };
+  const CURRENCY = 'د.أ';
+  const WHATSAPP = '962776577846';
+</script>
 
-    <!-- Hero Section -->
-    <section class="soft-gradient-bg pt-10 pb-16 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-rose-50 text-rose-500 font-medium text-xs mb-5 border border-rose-100">
-                ✨ مساحتكِ للتوازن، والتنظيم، والسكينة
-            </span>
-            
-            <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-800 leading-relaxed mb-5">
-                أدوات رقمية تفاعلية بلمسة  خاصة <br>
-                <span class="text-rose-500 font-bold">ترافقكِ في التخطيط والوعي والجمال</span>
-            </h1>
-            
-            <p class="text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8 font-normal">
-                3 ادوات صُممت بعناية لتساعدكِ على ترتيب يومكِ، متابعة روتينكِ والعناية بجمالكِ، السيطرة على أموالكِ بوضوح، وتثبيت وردكِ القرآني بأسلوب سلس ولطيف.
-            </p>
+<div class="wrap">
+<header>
+  <div class="brand"><span class="mark">H</span>متجري <small>Matjari</small></div>
+  <a class="hlink" href="#bundle">الباقة 🎁</a>
+</header>
 
-            <div class="flex justify-center gap-3">
-                <a href="#products" class="bg-slate-800 text-white px-7 py-3 rounded-full font-medium text-xs hover:bg-slate-700 transition-all shadow-sm">
-                    استكشفي الادوات الرقمية المساعدة 🌿
-                </a>
-            </div>
-        </div>
-    </section>
+<main>
+<section class="hero">
+  <h1>ترتيب <span class="r">اليوم</span>، وضوح <span class="n">المال</span>،<br>وتثبيت <span class="g">الحفظ</span></h1>
+  <div class="fan" aria-hidden="true">
+    <div class="ph p1" data-screen="comp"></div>
+    <div class="ph p2" data-screen="glow"></div>
+    <div class="ph p3" data-screen="meth"></div>
+    <div class="shade"></div>
+  </div>
+</section>
 
-    <!-- Main Showcase -->
-    <div id="products" class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+<section class="prods" id="products" aria-label="الأدوات">
 
-        <!-- Product 1: Glow Up 365 -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-rose-100/80 soft-card">
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-                <!-- Detailed Recreated UI Screenshot (Glow Up 365) -->
-                <div class="md:col-span-5">
-                    <div class="ui-screenshot-frame bg-gradient-to-b from-pink-50/70 via-white to-pink-50/40 p-3.5 max-w-[270px] mx-auto">
-                        <!-- Top Slogan Card -->
-                        <div class="bg-pink-100/50 py-2 px-3 rounded-2xl text-center mb-2.5">
-                            <p class="font-english italic text-pink-500 font-bold text-[11px] leading-tight">,Glowing skin<br>Glowing mind<br>.Glowing life</p>
-                        </div>
-                        
-                        <!-- Header Box -->
-                        <div class="bg-white p-2.5 rounded-2xl mb-2.5 shadow-xs border border-pink-100 flex items-center justify-between">
-                            <div>
-                                <span class="bg-pink-100/80 text-pink-600 text-[9px] font-bold px-2 py-0.5 rounded-full">المساحة الخاصة بالأنثى</span>
-                                <h4 class="font-extrabold text-slate-800 text-xs mt-1">Glow up 365 ✨</h4>
-                            </div>
-                            <div class="w-10 h-10 rounded-xl bg-pink-100/60 text-pink-500 flex items-center justify-center font-bold text-[10px] text-center leading-tight">
-                                Glow<br>Up
-                            </div>
-                        </div>
-
-                        <!-- Gauge Box -->
-                        <div class="bg-white/90 p-3 rounded-2xl border border-pink-100 mb-2.5 shadow-xs">
-                            <div class="flex justify-between items-center text-[11px] font-bold mb-0.5">
-                                <span class="text-slate-800">🪄 مؤشر الـ Glow Up اليومي</span>
-                            </div>
-                            <p class="text-[9px] text-slate-400 mb-1.5 leading-tight">يتغير الشريط بناءً على اهتمامك بصلواتك وعنايتك...</p>
-                            <div class="flex justify-between text-[10px] font-bold mb-1">
-                                <span class="text-slate-500">النسبة المنجزة:</span>
-                                <span class="text-pink-500">0%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1.5">
-                                <div class="bg-gradient-to-r from-pink-400 to-rose-400 h-full w-0"></div>
-                            </div>
-                            <div class="bg-pink-50/60 p-1.5 rounded-xl text-center border border-pink-100/50">
-                                <p class="text-[9px] text-slate-600">🌸 جسدك يستحق لحظة حب ورعاية</p>
-                            </div>
-                        </div>
-
-                        <!-- Mini Faith Module -->
-                        <div class="bg-white p-2.5 rounded-2xl border border-slate-100 shadow-xs text-[10px]">
-                            <div class="flex justify-between font-bold text-slate-700 mb-1">
-                                <span>🕌 ركن الروح والسكينة</span>
-                                <span class="text-[9px] text-indigo-500 font-normal">0/5 صلوات</span>
-                            </div>
-                            <div class="grid grid-cols-5 gap-1 text-[8px] text-center font-bold text-slate-500">
-                                <div class="p-1 rounded bg-slate-50 border">الفجر</div>
-                                <div class="p-1 rounded bg-slate-50 border">الظهر</div>
-                                <div class="p-1 rounded bg-slate-50 border">العصر</div>
-                                <div class="p-1 rounded bg-slate-50 border">المغرب</div>
-                                <div class="p-1 rounded bg-slate-50 border">العشاء</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Text Details -->
-                <div class="md:col-span-7 space-y-3 text-right">
-                    <span class="inline-block px-3 py-1 rounded-full badge-soft font-medium text-xs">
-                        🌸 للتألق والتطوير الشامل
-                    </span>
-                    <h2 class="text-xl font-bold text-slate-800">Glow Up 365</h2>
-                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                        رفيقتكِ اليومية لتنظيم روتين العناية بالبشرة والصحة، تتبع الصلوات والأذكار، شرب الماء، والتدوين المالي اليومي في واجهة أنيقة ومبهجة.
-                    </p>
-                    <ul class="text-xs text-slate-600 space-y-1.5 pt-1 font-normal">
-                        <li>✨ مؤشر حقيقي لحساب نسبة توهجكِ وإنجازكِ اليومي</li>
-                        <li>🌿 ركن السكينة (تتبع الصلوات الخمس والأذكار)</li>
-                        <li>💧 تتبع شرب الماء ومتابعة روتين العناية الـ 14 خطوة</li>
-                        <li>📝 مساحتكِ الخاصة للتدوين، التفريغ النفسي، والركن المالي</li>
-                    </ul>
-                    <div class="pt-3">
-                       <a href="https://wa.me/962776577846?text=اريد_شراء_تطبيق_Glow_Up" target="_blank" class="inline-block bg-rose-400 hover:bg-rose-500 text-white text-xs px-6 py-2.5 rounded-full font-medium transition-all shadow-sm">
-    امتلكي تطبيق Glow Up 💖
-</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 2: The Compass -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-100/80 soft-card">
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-                <!-- Detailed Recreated UI Screenshot (The Compass) -->
-                <div class="md:col-span-5">
-                    <div class="ui-screenshot-frame bg-amber-50/30 p-3.5 max-w-[270px] mx-auto">
-                        <!-- Top Header Bar -->
-                        <div class="flex items-center justify-between pb-2 border-b border-amber-200/50 mb-2.5">
-                            <div class="w-7 h-7 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-black text-[10px]">H</div>
-                            <div class="text-center">
-                                <h4 class="font-extrabold text-slate-900 text-xs">The Compass</h4>
-                                <p class="text-[8px] text-amber-700 font-bold">الوعي المالي والوضوح الرقمي</p>
-                            </div>
-                            <div class="w-6 h-6 rounded bg-slate-900 text-amber-400 flex items-center justify-center text-[10px]">
-                                <i class="fa-solid fa-bars"></i>
-                            </div>
-                        </div>
-
-                        <div class="mb-2">
-                            <span class="text-[11px] font-extrabold text-slate-800 border-r-2 border-amber-500 pr-1.5">قائمة المركز المالي</span>
-                        </div>
-
-                        <!-- Card 1: Assets -->
-                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 mb-2 shadow-xs">
-                            <div class="flex justify-between items-center mb-1.5">
-                                <span class="font-bold text-slate-800 text-[10px]">الأصول (Assets)</span>
-                                <span class="font-black text-slate-900 text-xs">$0</span>
-                            </div>
-                            <div class="flex gap-1 text-[9px]">
-                                <div class="bg-slate-50 border rounded-lg p-1 w-1/2 text-[8px] text-slate-400">مثال: كاش، ذمم</div>
-                                <div class="bg-slate-50 border rounded-lg p-1 w-1/4 text-[8px] text-slate-400">القيمة</div>
-                                <div class="bg-slate-900 text-white rounded-lg px-2 font-bold flex items-center justify-center">+</div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2: Liabilities -->
-                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 mb-2 shadow-xs">
-                            <div class="flex justify-between items-center mb-1.5">
-                                <span class="font-bold text-slate-800 text-[10px]">الالتزامات (Liabilities)</span>
-                                <span class="font-black text-slate-900 text-xs">$0</span>
-                            </div>
-                            <div class="flex gap-1 text-[9px]">
-                                <div class="bg-slate-50 border rounded-lg p-1 w-1/2 text-[8px] text-slate-400">مثال: قرض، ذمم</div>
-                                <div class="bg-slate-50 border rounded-lg p-1 w-1/4 text-[8px] text-slate-400">القيمة</div>
-                                <div class="bg-slate-800 text-white rounded-lg px-2 font-bold flex items-center justify-center">+</div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: Equity -->
-                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-xs">
-                            <div class="flex justify-between items-center mb-1.5">
-                                <span class="font-bold text-slate-800 text-[10px]">حقوق الملكية (Equity)</span>
-                                <span class="font-black text-amber-600 text-xs">$0</span>
-                            </div>
-                            <div class="flex gap-1 text-[9px]">
-                                <div class="bg-slate-50 border rounded-lg p-1 w-1/2 text-[8px] text-slate-400">مثال: رأس المال</div>
-                                <div class="bg-slate-50 border rounded-lg p-1 w-1/4 text-[8px] text-slate-400">القيمة</div>
-                                <div class="bg-amber-500 text-white rounded-lg px-2 font-bold flex items-center justify-center">+</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Text Details -->
-                <div class="md:col-span-7 space-y-3 text-right">
-                    <span class="inline-block px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-medium text-xs">
-                        📊 للوضوح المالي والاعمال
-                    </span>
-                    <h2 class="text-xl font-bold text-slate-800">The Compass</h2>
-                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                        تطبيق بسيط ومحاسبي بامتياز يمنحكِ رؤية واضحة لأموالكِ. نظمي أصولكِ والتزاماتكِ وتابعي أرباح أعمالكِ بكل يسر بدون تعقيدات.
-                    </p>
-                    <ul class="text-xs text-slate-600 space-y-1.5 pt-1 font-normal">
-                        <li>🍃 لوحة تحكم بسيطة وحساب آلي للإجماليات</li>
-                        <li>⚖️ تبويب سلس لقائمة المركز المالي (الأصول، الالتزامات، حقوق الملكية)</li>
-                        <li>📈 تحليل ربحية المبيعات وتصدير التقارير لـ Excel</li>
-                    </ul>
-                    <div class="pt-3">
-                     <a href="https://wa.me/962776577846?text=اريد_شراء_تطبيق_The_Compass" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-white text-xs px-6 py-2.5 rounded-full font-medium transition-all shadow-sm">
-    امتلكي بوصلة الوعي المالي 🧭
-</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 3: Methaq -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100/80 soft-card">
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-                <!-- Detailed Recreated UI Screenshot (Methaq) -->
-                <div class="md:col-span-5">
-                    <div class="ui-screenshot-frame bg-amber-50/40 p-3.5 max-w-[270px] mx-auto">
-                        <!-- Top Header Bar -->
-                        <div class="flex justify-between items-center pb-2 border-b border-amber-200/50 mb-2">
-                            <div class="bg-pink-100 text-pink-600 text-[8px] font-bold px-2 py-0.5 rounded-lg">البدء من جديد</div>
-                            <div class="text-right">
-                                <h4 class="font-extrabold text-amber-950 text-xs">مِيثاق الحِفْظِ 📖</h4>
-                                <p class="text-[7.5px] text-amber-700">تخطيط ذكي للتسميع والترحيل</p>
-                            </div>
-                        </div>
-
-                        <!-- Date Banner -->
-                        <div class="text-center mb-2">
-                            <span class="bg-amber-100 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded-full">28 يوليو، 2026</span>
-                            <h5 class="text-sm font-black text-amber-950 mt-0.5">اليوم الأول</h5>
-                            <p class="text-[8px] text-amber-800/80 leading-tight mt-0.5">مساحتك الحرة لتسميع وحفظ كتاب الله غيباً...</p>
-                        </div>
-
-                        <!-- Step Card -->
-                        <div class="bg-white p-2.5 rounded-xl border border-amber-200/60 shadow-xs text-[10px]">
-                            <p class="font-bold text-amber-800 text-[9px] mb-1.5">الخطوة الأولى: إعداد السورة والورد ✍️</p>
-                            
-                            <p class="text-[8px] text-slate-400 font-bold mb-0.5">1. اسم السورة</p>
-                            <div class="bg-slate-50 border rounded-lg p-1 font-bold text-slate-800 mb-1.5 text-[9px]">الملك</div>
-
-                            <div class="grid grid-cols-2 gap-1 mb-1.5">
-                                <div class="bg-slate-50 border rounded-lg p-1 text-center font-bold text-[9px]">من آية: 1</div>
-                                <div class="bg-slate-50 border rounded-lg p-1 text-center font-bold text-[9px]">إلى آية: 5</div>
-                            </div>
-
-                            <div class="bg-amber-50 p-1.5 rounded-lg text-center border border-amber-100">
-                                <span class="text-[8.5px] text-amber-800 font-bold block">حجم ورد اليوم: 5 آيات</span>
-                                <span class="text-[10px] font-black text-amber-950">إجمالي الآيات: 0 آية</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Text Details -->
-                <div class="md:col-span-7 space-y-3 text-right">
-                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-medium text-xs">
-                        🕊️ للجانب القرآني والإيماني
-                    </span>
-                    <h2 class="text-xl font-bold text-slate-800">مِيثاق الحِفْظِ</h2>
-                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                        تطبيق لطيف ومساعد مخصص لمتابعة وتثبيت حفظ القرآن الكريم. ينقل حفظ اليوم تلقائياً ليكون ورد مراجعة مثبت في الغد لضمان عدم النسيان.
-                    </p>
-                    <ul class="text-xs text-slate-600 space-y-1.5 pt-1 font-normal">
-                        <li>🔄 ترحيل آلي تلقائي لتثبيت الحفظ والمراجعة</li>
-                        <li>🌱 تدقيق كتابي ومطابقة ذكية ملونة للأخطاء</li>
-                        <li>📊 حساب تلقائي لورد اليوم وإجمالي الآيات المحفوظة</li>
-                    </ul>
-                    <div class="pt-3">
-                       <a href="https://wa.me/962776577846?text=اريد_شراء_تطبيق_ميثاق_الحفظ" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-6 py-2.5 rounded-full font-medium transition-all shadow-sm">
-    احصلي على ميثاق الحفظ 📖
-</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+  <article>
+    <div class="cover c-glow" id="cover-glow">
+      <span class="blob b1"></span><span class="blob b2"></span>
+      <div class="txt">
+        <span class="kick">للتألق والعناية 🌸</span>
+        <h2 class="en" dir="ltr" style="text-align:right">Glow Up 365</h2>
+        <p>رفيقتكِ اليومية للتوهّج</p>
+      </div>
+      <div class="ph" data-screen="glow"></div>
+      <span class="chip ch1">✨ ٧٥٪ توهّج</span>
+      <span class="chip ch2">💧 ٦ أكواب</span>
+      <span class="tag" data-price="glow"></span>
     </div>
+    <p class="about a-rose">تطبيقكِ اليومي للعناية بنفسكِ: صلواتكِ وأذكاركِ، شرب الماء، روتين البشرة بـ١٤ خطوة، ومساحة للتدوين والمصروف. ومؤشر توهّج بيكبر كل ما اهتميتي بحالكِ ✨</p>
+    <div class="buy">
+      <span class="price" data-price="glow"></span>
+      <a class="btn b-rose" data-buy="glow" href="#" target="_blank" rel="noopener">اطلبيه الآن <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg></a>
+    </div>
+  </article>
 
-    <!-- Bundle Offer -->
-    <section id="bundle" class="py-12 px-4 max-w-3xl mx-auto text-center my-8">
-        <div class="bg-gradient-to-b from-rose-50/60 to-amber-50/40 p-8 rounded-3xl border border-rose-100">
-            <span class="text-rose-500 font-semibold text-xs uppercase tracking-wider bg-white px-3 py-1 rounded-full border border-rose-100">
-                🎁 العرض  الكامل
-            </span>
-            <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mt-3 mb-2">امتلكي الادوات الثلاث الكاملة</h3>
-            <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto mb-6">
-                احصلي على التطبيقات الثلاثة معاً لتجربة متكاملة تجمع بين الجمال، المال، والروح بخصم خاص وتفعيل دائم  .
-            </p>
+  <article>
+    <div class="cover c-comp" id="cover-compass">
+      <span class="blob b1"></span><span class="blob b2"></span>
+      <div class="txt">
+        <span class="kick">البوصلة</span>
+        <h2 class="en" dir="ltr" style="text-align:right">The Compass</h2>
+        <p>مركزك المالي بوضوح</p>
+      </div>
+      <div class="ph" data-screen="comp"></div>
+      <span class="chip ch2">🌍 العملة: د.أ</span>
+      <span class="tag" data-price="compass"></span>
+    </div>
+    <p class="about a-ink">تطبيق محاسبي للمتاجر والمشاريع، بيعطيك صورة واضحة عن أموالك: الأصول والالتزامات وحقوق الملكية، تحليل للأرباح، وتصدير لـ Excel، وبالعملة اللي بتختارها 🧭</p>
+    <div class="buy">
+      <span class="pwrap"><span class="price" data-price="compass"></span><span class="once">مرة وحدة · بدون اشتراك</span></span>
+      <a class="btn b-navy" data-buy="compass" href="#" target="_blank" rel="noopener">اطلبها الآن <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg></a>
+    </div>
+  </article>
 
-           <a href="https://wa.me/962776577846?text=اريد_شراء_الباقة_الكاملة" target="_blank" class="inline-block bg-slate-800 hover:bg-slate-900 text-white px-8 py-3.5 rounded-full font-medium text-xs shadow-md transition-all">
-    احصلي الباقة الكاملة الآن ✨
-</a>
-        </div>
-    </section>
+  <article>
+    <div class="cover c-meth" id="cover-methaq">
+      <span class="blob b1"></span><span class="blob b2"></span>
+      <div class="txt">
+        <span class="kick">صدقة جارية 🕊️</span>
+        <h2>ميثاق الحفظ</h2>
+        <p>حفظ اليوم، مراجعة الغد</p>
+      </div>
+      <span class="free">مجاني 🎁</span>
+      <div class="ph" data-screen="meth"></div>
+      <span class="chip ch2">↻ مراجعة تلقائية</span>
+      <span class="tag">مجاني 🎁</span>
+    </div>
+    <p class="about a-sage">رفيقك بحفظ القرآن: بيحدد ورد اليوم، وبيرحّله تلقائياً لمراجعة بكرة عشان ما ينتسى، مع تدقيق ملوّن للتسميع. مجاني، صدقة جارية 🤍</p>
+    <div class="buy">
+      <span class="freep">مجاني 🎁</span>
+      <a class="btn b-sage" href="https://hedayaodat20-cell.github.io/methaq/" target="_blank" rel="noopener">افتح التطبيق 📖</a>
+    </div>
+  </article>
 
-    <!-- Simple Footer -->
-    <footer class="py-6 text-center text-slate-400 text-[11px] border-t border-slate-100">
-        <p>© 2026 جميع الحقوق محفوظة | Designed  by <span class="text-slate-600 font-medium">Hedaya Odat</span></p>
-    </footer>
+</section>
 
+<section class="bundle" id="bundle">
+  <div class="pair" aria-hidden="true">
+    <div class="mini q1" data-cover="cover-compass"></div>
+    <div class="mini q2" data-cover="cover-glow"></div>
+  </div>
+  <h3 class="en">Glow Up<span class="plus">+</span>The Compass</h3>
+  <div class="bprice"><span class="now" data-price="bundle"></span><s data-price-old="bundle"></s></div>
+  <a class="btn b-ink" data-buy="bundle" href="#" target="_blank" rel="noopener">اطلب الباقة 🎁</a>
+</section>
+
+<section class="how">
+  <h3>كيف بتشتري؟</h3>
+  <ol class="steps">
+    <li><span class="n">١</span>اختر الأداة</li>
+    <li><span class="n">٢</span>احكيني واتساب وادفع</li>
+    <li><span class="n">٣</span>بيوصلك كود التفعيل</li>
+  </ol>
+</section>
+</main>
+</div>
+
+<footer>
+  <span class="mark">H</span>
+  <span>© ٢٠٢٦ متجري</span>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></symbol></defs></svg>
+
+<!-- شاشات العرض: لقطات حقيقية من التطبيقات (img/) -->
+<template id="t-glow">
+  <div class="scr shot" style="background:#fff;color:#4A2232"><div class="island"></div>
+    <div class="sbar"><span>9:41</span><span class="bat"></span></div>
+    <img src="glowup.jpg" alt="لقطة من تطبيق Glow Up 365" decoding="async">
+  </div>
+</template>
+<template id="t-comp">
+  <div class="scr shot" style="background:#F6F1E7;color:#13303A"><div class="island"></div>
+    <div class="sbar"><span>9:41</span><span class="bat"></span></div>
+    <img src="compass.jpg" alt="لقطة من تطبيق البوصلة" decoding="async">
+  </div>
+</template>
+<template id="t-meth">
+  <div class="scr shot" style="background:#fff;color:#24382B"><div class="island"></div>
+    <div class="sbar"><span>9:41</span><span class="bat"></span></div>
+    <img src="methaq.jpg" alt="لقطة من تطبيق ميثاق الحفظ" decoding="async">
+  </div>
+</template>
+
+<script>
+(function () {
+  // نسخ مصغّرة للأغلفة (الباقة)
+  document.querySelectorAll('[data-cover]').forEach(function (el) {
+    var c = document.getElementById(el.dataset.cover).cloneNode(true);
+    c.removeAttribute('id'); el.appendChild(c);
+  });
+  // شاشات العرض
+  document.querySelectorAll('[data-screen]').forEach(function (el) {
+    var t = document.getElementById('t-' + el.dataset.screen);
+    if (!t) return; var f = document.createElement('div'); f.className = 'fr'; f.appendChild(t.content.cloneNode(true)); el.appendChild(f);
+  });
+  // الأسعار وروابط الواتساب
+  var num = function (n) { return Number(n).toLocaleString('ar-EG'); };
+  var fmt = function (n) { return num(n) + ' ' + CURRENCY; };
+  var NAMES = { glow: 'Glow Up 365', compass: 'The Compass', bundle: 'باقة Glow Up + The Compass' };
+  document.querySelectorAll('[data-price]').forEach(function (el) {
+    var p = PRICES[el.dataset.price];
+    el.innerHTML = el.classList.contains('tag') ? fmt(p.now) : num(p.now) + ' <small>' + CURRENCY + '</small>';
+  });
+  document.querySelectorAll('[data-price-old]').forEach(function (el) {
+    var p = PRICES[el.dataset.priceOld]; if (p.old) el.textContent = fmt(p.old); else el.remove();
+  });
+  document.querySelectorAll('[data-buy]').forEach(function (el) {
+    var k = el.dataset.buy;
+    var msg = 'مرحبا، بدي أشتري ' + NAMES[k] + ' (' + PRICES[k].now + ' ' + CURRENCY + ')';
+    el.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg);
+  });
+})();
+</script>
 </body>
 </html>
-
