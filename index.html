@@ -115,8 +115,29 @@ header{display:flex;align-items:center;justify-content:space-between;padding:22p
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:999px;font-weight:500;font-size:15px;color:#fff;white-space:nowrap;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 22px -12px rgba(0,0,0,.45)}
 .btn:hover{transform:translateY(-2px)}
 .btn svg{width:18px;height:18px;flex:none}
-.b-rose{background:#C24D72}.b-navy{background:#0F2B35}.b-sage{background:#3F6849}.b-ink{background:var(--ink)}
+.b-rose{background:#C24D72}
+.open{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 6px 0;padding:12px 20px;border-radius:999px;border:1.5px solid currentColor;font-weight:500;font-size:15px;background:transparent;transition:transform .2s}
+.open:hover{transform:translateY(-2px)}
+.o-rose{color:#C24D72}.o-navy{color:#0F2B35}
+.b-navy{background:#0F2B35}.b-sage{background:#3F6849}.b-ink{background:var(--ink)}
 .freep{font-size:22px;font-weight:600;color:var(--sage-d)}
+
+
+/* صفحة المنتج */
+.sheet{position:fixed;inset:0;z-index:50;background:var(--paper);overflow-y:auto;display:none}
+.sheet.on{display:block;animation:up .25s ease}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.sh-in{max-width:440px;margin:0 auto;padding:20px 24px 48px;min-height:100%;display:flex;flex-direction:column}
+.sh-top{display:flex;margin-bottom:14px}
+.sh-cover{border-radius:26px;overflow:hidden;height:360px;width:100%;position:relative;container-type:inline-size}
+.sh-cover>.cover{height:100%;width:100%;border-radius:0}
+.sh-cover .tag{display:none}
+.sh-x{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--line);font-size:18px}
+.sh-name{font-size:40px;text-align:center}
+.sh-price{text-align:center;margin:22px 0 18px}
+.sh .btn{width:100%;padding:16px}
+.sh-steps{margin:26px 4px;font-size:16px;line-height:2.1;text-align:center}
+.sh .open{margin:0}
 
 /* bundle */
 .bundle{margin-top:64px;border-radius:30px;background:var(--card);border:1px solid var(--line);padding:34px 24px 30px;text-align:center;position:relative;overflow:hidden}
@@ -214,6 +235,7 @@ footer .mark{width:28px;height:28px;font-size:14px}
       <span class="price" data-price="glow"></span>
       <a class="btn b-rose" data-buy="glow" href="#" target="_blank" rel="noopener">اطلبيه الآن <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg></a>
     </div>
+    <a class="open o-rose" href="#app-glow">افتحي التطبيق 🌸</a>
   </article>
 
   <article>
@@ -233,6 +255,7 @@ footer .mark{width:28px;height:28px;font-size:14px}
       <span class="pwrap"><span class="price" data-price="compass"></span><span class="once">مرة وحدة · بدون اشتراك</span></span>
       <a class="btn b-navy" data-buy="compass" href="#" target="_blank" rel="noopener">اطلبها الآن <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg></a>
     </div>
+    <a class="open o-navy" href="#app-compass">افتح التطبيق 🧭</a>
   </article>
 
   <article>
@@ -278,6 +301,28 @@ footer .mark{width:28px;height:28px;font-size:14px}
 </main>
 </div>
 
+
+<div class="sheet sh" id="app-glow" role="dialog" aria-label="Glow Up 365">
+ <div class="sh-in">
+  <div class="sh-top"><a class="sh-x" href="#products" aria-label="رجوع">✕</a></div>
+  <div class="sh-cover" data-cover="cover-glow"></div>
+  <div class="sh-price"><span class="price" data-price="glow"></span></div>
+  <a class="btn b-rose" data-buy="glow" href="#" target="_blank" rel="noopener">اطلبيه الآن</a>
+  <div class="sh-steps"><p>آيفون: Safari ← مشاركة ← الشاشة الرئيسية</p><p>أندرويد: Chrome ← ⋮ ← تثبيت التطبيق</p><p>رمز التفعيل بيوصلك واتساب بعد الشراء</p></div>
+  <a class="open o-rose" href="https://hedayaodat20-cell.github.io/Glow-up-girl/" target="_blank" rel="noopener">افتحي التطبيق</a>
+ </div>
+</div>
+<div class="sheet sh" id="app-compass" role="dialog" aria-label="The Compass">
+ <div class="sh-in">
+  <div class="sh-top"><a class="sh-x" href="#products" aria-label="رجوع">✕</a></div>
+  <div class="sh-cover" data-cover="cover-compass"></div>
+  <div class="sh-price"><span class="price" data-price="compass"></span></div>
+  <a class="btn b-navy" data-buy="compass" href="#" target="_blank" rel="noopener">اطلبها الآن</a>
+  <div class="sh-steps"><p>آيفون: Safari ← مشاركة ← الشاشة الرئيسية</p><p>أندرويد: Chrome ← ⋮ ← تثبيت التطبيق</p><p>رمز التفعيل بيوصل واتساب بعد الشراء</p></div>
+  <a class="open o-navy" href="https://hedayaodat64-design.github.io/hedaya-compass/" target="_blank" rel="noopener">افتح التطبيق</a>
+ </div>
+</div>
+
 <footer>
   <span class="mark">H</span>
   <span>© ٢٠٢٦ متجري</span>
@@ -318,7 +363,7 @@ footer .mark{width:28px;height:28px;font-size:14px}
     if (!t) return; var f = document.createElement('div'); f.className = 'fr'; f.appendChild(t.content.cloneNode(true)); el.appendChild(f);
   });
   // الأسعار وروابط الواتساب
-  var num = function (n) { return Number(n).toLocaleString('ar-EG'); };
+  var num = function (n) { return Number(n).toLocaleString('en-US'); };
   var fmt = function (n) { return num(n) + ' ' + CURRENCY; };
   var NAMES = { glow: 'Glow Up 365', compass: 'The Compass', bundle: 'باقة Glow Up + The Compass' };
   document.querySelectorAll('[data-price]').forEach(function (el) {
@@ -333,6 +378,10 @@ footer .mark{width:28px;height:28px;font-size:14px}
     var msg = 'مرحبا، بدي أشتري ' + NAMES[k] + ' (' + PRICES[k].now + ' ' + CURRENCY + ')';
     el.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg);
   });
+
+  // صفحات المنتجات
+  function route(){ document.querySelectorAll('.sheet').forEach(function(s){ s.classList.toggle('on', location.hash==='#'+s.id); }); document.body.style.overflow = document.querySelector('.sheet.on') ? 'hidden' : ''; }
+  window.addEventListener('hashchange', route); route();
 })();
 </script>
 </body>
